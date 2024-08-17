@@ -4,19 +4,27 @@ This project implements a user registration form using Next.js, React Hook Form,
 
 ## Setup and Running the Application
 
-1. Clone the repository:
-git clone https://github.com/nayanbamnote/Bilateral-Solution-Assignment.gitF
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/nayanbamnote/Bilateral-Solution-Assignment.git
+    ```
 
-2. Navigate to the project directory:
-cd Bilateral-Solution-Assignment
+2. **Navigate to the project directory:**
+    ```bash
+    cd Bilateral-Solution-Assignment
+    ```
 
-3. Install dependencies:
-npm install
+3. **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-4. Run the development server:
-npm run dev
+4. **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+5. **Open http://localhost:3000 in your browser to view the application.**
 
 ## Features
 
@@ -39,4 +47,4 @@ This project was completed as part of an assignment to create a form with data b
 
 ## Deploy on Vercel
 
-Check out my [Next.js deployment](https://bilateral-solution-assignment.vercel.app/).
+Check out my [Next.js deployment](your-vercel-deployment-link).
