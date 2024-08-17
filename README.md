@@ -36,3 +36,9 @@ npm run dev
 ## Assignment Details
 
 This project was completed as part of an assignment to create a form with data binding and submission handling. It demonstrates proper implementation of reactive forms, two-way data binding, form validation, and submission handling.
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+
+Check out our [Next.js deployment](https://bilateral-solution-assignment.vercel.app/).
