@@ -1,15 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
-import { formSchema, FormValues } from "@/schemas/FormSchema";
+import { formSchema, FormValues } from "./FormSchema";
 import { FirstNameField, LastNameField, EmailField, PasswordField, ConfirmPasswordField } from "./FormFields";
 
 export default function UserRegistrationForm() {
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
   const { toast } = useToast();
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -21,6 +23,15 @@ export default function UserRegistrationForm() {
       confirmpassword: "",
     },
   });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsButtonDisabled(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
 
   const onSubmit = (values: FormValues) => {
     const formattedValues = Object.entries(values)
@@ -53,10 +64,12 @@ export default function UserRegistrationForm() {
           <PasswordField control={form.control} />
           <ConfirmPasswordField control={form.control} />
           <Button
-            className="w-full bg-gradient-to-br from-zinc-900 to-zinc-900 text-white font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-            type="submit">
-            Register
-          </Button>
+              className="w-full bg-gradient-to-br from-zinc-900 to-zinc-900 text-white font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+              type="submit"
+              disabled={isButtonDisabled}
+            >
+              {isButtonDisabled ? "Please wait..." : "Register"}
+            </Button>
         </form>
       </Form>
     </div>

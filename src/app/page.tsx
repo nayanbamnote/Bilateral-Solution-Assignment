@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import UserRegistrationForm from "@/components/UserRegistration/UserRegistrationForm";
 

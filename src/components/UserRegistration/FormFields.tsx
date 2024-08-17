@@ -4,7 +4,7 @@ import { FormControl, FormField, FormItem, FormMessage } from "@/components/ui/f
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import LabelInputContainer from "@/components/LabelInputContainer";
-import { FormValues } from "@/schemas/FormSchema";
+import { FormValues } from "@/components/UserRegistration/FormSchema";
 
 interface FieldProps {
   control: Control<FormValues>;
@@ -41,7 +41,7 @@ export const LastNameField: React.FC<{ control: Control<FormValues> }> = ({ cont
 );
 
 export const EmailField: React.FC<{ control: Control<FormValues> }> = ({ control }) => (
-  <FormFieldComponent control={control} name="email" label="Email Address" placeholder="nareshbamnote52@gmail.com" type="email" />
+  <FormFieldComponent control={control} name="email" label="Email Address" placeholder="nareshbamnote52@gmail.com" type="text" />
 );
 
 export const PasswordField: React.FC<{ control: Control<FormValues> }> = ({ control }) => (
