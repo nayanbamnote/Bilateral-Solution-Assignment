@@ -47,4 +47,4 @@ This project was completed as part of an assignment to create a form with data b
 
 ## Deploy on Vercel
 
-Check out my [Next.js deployment](your-vercel-deployment-link).
+Check out my [Next.js deployment](https://bilateral-solution-assignment.vercel.app/).
